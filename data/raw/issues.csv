@@ -1,0 +1,201 @@
+Issue_ID,Project,Phase,Module,Type,Severity,Status,Owner,Root_Cause,Quality_Gate,Created_Date,Due_Date,Closed_Date
+ISS-0001,C,Integration 1,BIOS,Audit Finding,Critical,Open,Engineer_11,Product Request,Final Release,24-11-2023,04-12-2023,
+ISS-0002,A,BST,Application,Audit Finding,High,Overdue,Engineer_09,Driver,Design Review,14-02-2023,26-03-2023,
+ISS-0003,B,System Test,Server Specific,Review Finding,Critical,Overdue,Engineer_13,Unclassified,Code Review,15-10-2023,30-10-2023,
+ISS-0004,B,Integration 1,Driver,Action Item,Critical,Closed,Engineer_07,Code Integration,Integration Test,24-12-2023,23-01-2024,31-12-2023
+ISS-0005,D,Final Release,Application,Defect,Critical,Closed,Engineer_09,OS-specific,Final Release,26-06-2023,06-08-2023,29-06-2023
+ISS-0006,A,BST,BIOS,Review Finding,Critical,In Progress,Engineer_14,FW Integration,Design Review,05-07-2023,13-08-2023,
+ISS-0007,C,Integration 1,Driver,Review Finding,High,Overdue,Engineer_11,OS-specific,Design Review,14-07-2023,03-08-2023,
+ISS-0008,E,Integration 1,BIOS,Defect,Low,In Progress,Engineer_05,Product Request,Final Release,08-11-2023,21-12-2023,
+ISS-0009,B,BST,Driver,Defect,Medium,Open,Engineer_02,FW Integration,Final Release,23-04-2023,16-05-2023,
+ISS-0010,D,System Test,BIOS,Review Finding,High,Overdue,Engineer_04,Product Request,Final Release,11-06-2023,27-06-2023,
+ISS-0011,E,System Test,Driver,Audit Finding,High,Overdue,Engineer_09,Change Request,Design Review,03-10-2023,22-10-2023,
+ISS-0012,B,System Test,Server Specific,Action Item,Low,In Progress,Engineer_07,Driver,System Test,25-01-2023,04-02-2023,
+ISS-0013,A,Final Release,Driver,Review Finding,Critical,Open,Engineer_05,Change Request,Code Review,28-09-2023,17-10-2023,
+ISS-0014,B,Final Release,Application,Review Finding,High,Closed,Engineer_03,OS-specific,Code Review,21-08-2023,24-08-2023,30-08-2023
+ISS-0015,E,Integration 2,FW,Action Item,Critical,Open,Engineer_15,OS-specific,Integration Test,04-10-2023,09-11-2023,
+ISS-0016,E,BST,Application,Defect,Critical,In Progress,Engineer_13,Driver,Code Review,03-05-2023,09-05-2023,
+ISS-0017,E,Integration 1,Driver,Defect,High,Overdue,Engineer_15,Driver,Code Review,07-03-2023,21-04-2023,
+ISS-0018,E,System Test,Application,Audit Finding,High,Closed,Engineer_02,OS-specific,Design Review,09-06-2023,07-07-2023,08-07-2023
+ISS-0019,E,Integration 1,Application,Action Item,Critical,In Progress,Engineer_04,Code Integration,Design Review,29-10-2023,06-12-2023,
+ISS-0020,C,System Test,BIOS,Audit Finding,Low,In Progress,Engineer_04,Unclassified,System Test,19-06-2023,26-06-2023,
+ISS-0021,A,System Test,Driver,Defect,Low,Open,Engineer_08,Unclassified,Design Review,28-07-2023,12-08-2023,
+ISS-0022,A,System Test,Driver,Action Item,High,Open,Engineer_04,FW Integration,Final Release,11-12-2023,24-01-2024,
+ISS-0023,B,Integration 2,FW,Audit Finding,Critical,Overdue,Engineer_08,Unclassified,Final Release,18-08-2023,29-08-2023,
+ISS-0024,A,Integration 1,BIOS,Defect,Low,Open,Engineer_08,FW Integration,System Test,20-02-2023,26-02-2023,
+ISS-0025,A,System Test,Driver,Defect,Medium,Overdue,Engineer_07,Product Request,Final Release,31-01-2023,13-02-2023,
+ISS-0026,B,Integration 2,BIOS,Action Item,Critical,In Progress,Engineer_12,OS-specific,Design Review,05-12-2023,08-01-2024,
+ISS-0027,E,Final Release,BIOS,Action Item,Critical,Overdue,Engineer_14,FW Integration,Design Review,26-01-2023,07-03-2023,
+ISS-0028,D,BST,Server Specific,Audit Finding,Critical,In Progress,Engineer_10,Code Integration,System Test,01-11-2023,08-11-2023,
+ISS-0029,B,Integration 2,BIOS,Review Finding,Low,Closed,Engineer_03,Product Request,Integration Test,03-12-2023,12-01-2024,20-12-2023
+ISS-0030,A,System Test,Server Specific,Action Item,Critical,Open,Engineer_09,FW Integration,Final Release,23-08-2023,15-09-2023,
+ISS-0031,B,Integration 2,Driver,Audit Finding,Low,Closed,Engineer_14,Driver,Integration Test,16-05-2023,27-05-2023,19-05-2023
+ISS-0032,E,Integration 2,Application,Audit Finding,Medium,Open,Engineer_02,Code Integration,Final Release,10-11-2023,24-12-2023,
+ISS-0033,B,Integration 2,BIOS,Review Finding,Low,Closed,Engineer_05,Unclassified,Design Review,21-03-2023,10-04-2023,10-04-2023
+ISS-0034,C,BST,Application,Review Finding,High,Overdue,Engineer_11,OS-specific,Code Review,17-02-2023,01-04-2023,
+ISS-0035,E,BST,Application,Action Item,High,Overdue,Engineer_09,Code Integration,Integration Test,15-08-2023,22-09-2023,
+ISS-0036,D,Integration 1,Application,Review Finding,Medium,In Progress,Engineer_15,Unclassified,Design Review,26-10-2023,03-12-2023,
+ISS-0037,A,Integration 2,Server Specific,Defect,High,In Progress,Engineer_15,FW Integration,Code Review,03-07-2023,19-07-2023,
+ISS-0038,B,Integration 2,FW,Audit Finding,Medium,Open,Engineer_03,Unclassified,Design Review,01-04-2023,30-04-2023,
+ISS-0039,B,Integration 1,FW,Review Finding,Medium,Overdue,Engineer_14,Unclassified,Code Review,15-07-2023,20-07-2023,
+ISS-0040,D,Integration 2,Driver,Action Item,Medium,In Progress,Engineer_06,Product Request,Final Release,25-04-2023,29-04-2023,
+ISS-0041,A,Integration 2,BIOS,Review Finding,Critical,Closed,Engineer_02,Driver,System Test,24-07-2023,30-08-2023,26-07-2023
+ISS-0042,E,Final Release,Application,Defect,High,Overdue,Engineer_05,Code Integration,System Test,26-06-2023,19-07-2023,
+ISS-0043,C,System Test,Application,Review Finding,Medium,In Progress,Engineer_11,Unclassified,Design Review,01-01-2023,06-02-2023,
+ISS-0044,D,Integration 2,FW,Review Finding,High,Closed,Engineer_04,Change Request,System Test,03-06-2023,08-07-2023,16-07-2023
+ISS-0045,E,BST,Driver,Review Finding,High,Closed,Engineer_07,Unclassified,Final Release,13-12-2023,27-12-2023,26-12-2023
+ISS-0046,D,System Test,BIOS,Defect,High,Closed,Engineer_11,Code Integration,Integration Test,07-11-2023,21-12-2023,07-12-2023
+ISS-0047,B,Integration 2,BIOS,Audit Finding,High,Closed,Engineer_01,Code Integration,Code Review,21-09-2023,05-11-2023,27-09-2023
+ISS-0048,D,System Test,Server Specific,Audit Finding,Low,Open,Engineer_08,Change Request,Code Review,01-09-2023,13-10-2023,
+ISS-0049,A,System Test,BIOS,Audit Finding,Low,Open,Engineer_01,Driver,Code Review,17-03-2023,30-04-2023,
+ISS-0050,D,Final Release,Server Specific,Review Finding,Low,In Progress,Engineer_10,Unclassified,Final Release,04-03-2023,05-04-2023,
+ISS-0051,B,System Test,FW,Review Finding,High,Overdue,Engineer_14,Product Request,Integration Test,07-08-2023,14-09-2023,
+ISS-0052,C,System Test,Application,Review Finding,High,In Progress,Engineer_05,OS-specific,Integration Test,24-09-2023,28-10-2023,
+ISS-0053,B,Integration 1,FW,Audit Finding,High,In Progress,Engineer_02,Change Request,System Test,04-10-2023,12-10-2023,
+ISS-0054,D,BST,BIOS,Defect,Low,Overdue,Engineer_15,Unclassified,Final Release,19-06-2023,26-07-2023,
+ISS-0055,D,BST,Driver,Review Finding,Low,Overdue,Engineer_14,Unclassified,System Test,23-12-2023,27-12-2023,
+ISS-0056,D,Integration 1,Driver,Defect,Low,In Progress,Engineer_01,Change Request,Integration Test,03-10-2023,09-11-2023,
+ISS-0057,D,Integration 1,Server Specific,Action Item,Low,In Progress,Engineer_10,Driver,Design Review,09-12-2023,06-01-2024,
+ISS-0058,B,System Test,BIOS,Action Item,Medium,Overdue,Engineer_07,OS-specific,Code Review,12-02-2023,28-03-2023,
+ISS-0059,C,System Test,Driver,Action Item,Low,Closed,Engineer_01,Product Request,Final Release,21-08-2023,13-09-2023,15-09-2023
+ISS-0060,A,BST,Application,Audit Finding,High,In Progress,Engineer_14,Code Integration,Final Release,27-01-2023,21-02-2023,
+ISS-0061,D,BST,Server Specific,Audit Finding,Low,In Progress,Engineer_12,OS-specific,Integration Test,20-03-2023,07-04-2023,
+ISS-0062,B,Integration 2,Application,Action Item,Medium,Open,Engineer_10,Product Request,System Test,27-03-2023,07-05-2023,
+ISS-0063,E,Integration 1,Application,Review Finding,Critical,Open,Engineer_13,Driver,Design Review,23-07-2023,07-08-2023,
+ISS-0064,C,BST,Server Specific,Review Finding,Critical,Overdue,Engineer_14,Change Request,System Test,27-06-2023,03-08-2023,
+ISS-0065,B,System Test,BIOS,Review Finding,Low,Closed,Engineer_08,Change Request,Final Release,24-02-2023,26-03-2023,26-03-2023
+ISS-0066,A,Integration 2,FW,Audit Finding,Low,In Progress,Engineer_10,Driver,System Test,18-05-2023,10-06-2023,
+ISS-0067,C,Integration 1,FW,Audit Finding,Medium,Overdue,Engineer_13,OS-specific,Integration Test,22-06-2023,26-06-2023,
+ISS-0068,A,Final Release,BIOS,Action Item,High,Closed,Engineer_12,Change Request,System Test,24-05-2023,04-07-2023,29-06-2023
+ISS-0069,D,System Test,Application,Action Item,Medium,Overdue,Engineer_04,Change Request,Code Review,12-10-2023,30-10-2023,
+ISS-0070,E,Final Release,Driver,Defect,Medium,Closed,Engineer_06,Product Request,System Test,06-06-2023,21-07-2023,07-07-2023
+ISS-0071,A,Integration 1,Driver,Action Item,High,Closed,Engineer_04,FW Integration,System Test,19-05-2023,10-06-2023,03-06-2023
+ISS-0072,B,Integration 2,BIOS,Review Finding,High,Closed,Engineer_05,Code Integration,Final Release,22-05-2023,01-07-2023,29-05-2023
+ISS-0073,A,Final Release,Driver,Audit Finding,Low,Open,Engineer_02,Unclassified,Design Review,06-03-2023,26-03-2023,
+ISS-0074,D,System Test,Driver,Audit Finding,Critical,Overdue,Engineer_05,Unclassified,System Test,21-10-2023,11-11-2023,
+ISS-0075,D,BST,Server Specific,Action Item,High,Overdue,Engineer_03,Unclassified,Final Release,28-02-2023,07-03-2023,
+ISS-0076,A,Final Release,FW,Audit Finding,Low,In Progress,Engineer_08,Change Request,Integration Test,05-06-2023,13-06-2023,
+ISS-0077,E,BST,Server Specific,Action Item,High,Closed,Engineer_11,FW Integration,Integration Test,29-10-2023,28-11-2023,05-12-2023
+ISS-0078,B,Integration 1,Server Specific,Action Item,High,In Progress,Engineer_01,Change Request,System Test,05-12-2023,13-12-2023,
+ISS-0079,C,BST,BIOS,Review Finding,Medium,Overdue,Engineer_12,Unclassified,System Test,19-12-2023,29-01-2024,
+ISS-0080,E,Integration 1,FW,Action Item,High,Closed,Engineer_11,FW Integration,Integration Test,06-02-2023,23-02-2023,04-03-2023
+ISS-0081,B,Integration 2,Server Specific,Review Finding,Low,Open,Engineer_02,Change Request,Integration Test,14-03-2023,21-03-2023,
+ISS-0082,E,System Test,FW,Action Item,Critical,Closed,Engineer_15,Change Request,Integration Test,25-12-2023,22-01-2024,31-12-2023
+ISS-0083,A,Integration 1,Server Specific,Action Item,Medium,Open,Engineer_10,Code Integration,Code Review,06-11-2023,25-11-2023,
+ISS-0084,C,Integration 1,Server Specific,Defect,Low,Overdue,Engineer_02,Change Request,Integration Test,29-08-2023,04-10-2023,
+ISS-0085,B,Integration 2,FW,Defect,Medium,Closed,Engineer_11,Change Request,Final Release,29-07-2023,22-08-2023,05-08-2023
+ISS-0086,C,Integration 2,Driver,Action Item,Low,Open,Engineer_14,Driver,Design Review,19-01-2023,20-02-2023,
+ISS-0087,D,BST,BIOS,Review Finding,Low,Overdue,Engineer_11,Change Request,Design Review,03-12-2023,09-01-2024,
+ISS-0088,C,System Test,FW,Action Item,Critical,In Progress,Engineer_11,Driver,Code Review,15-04-2023,05-05-2023,
+ISS-0089,A,Final Release,FW,Action Item,High,Closed,Engineer_14,Code Integration,System Test,30-12-2023,12-01-2024,31-12-2023
+ISS-0090,D,Integration 2,Server Specific,Review Finding,Low,In Progress,Engineer_14,Change Request,System Test,02-03-2023,15-04-2023,
+ISS-0091,D,Integration 1,Server Specific,Audit Finding,Critical,In Progress,Engineer_05,Unclassified,System Test,05-05-2023,06-06-2023,
+ISS-0092,C,Integration 2,Server Specific,Defect,High,Closed,Engineer_08,Driver,System Test,24-06-2023,29-07-2023,25-06-2023
+ISS-0093,D,Integration 2,BIOS,Audit Finding,Low,Overdue,Engineer_04,Unclassified,System Test,26-06-2023,20-07-2023,
+ISS-0094,D,System Test,BIOS,Defect,Critical,Overdue,Engineer_03,Driver,Final Release,23-01-2023,15-02-2023,
+ISS-0095,A,Final Release,FW,Action Item,High,Overdue,Engineer_07,Unclassified,Code Review,19-06-2023,28-06-2023,
+ISS-0096,E,System Test,Application,Review Finding,Low,Closed,Engineer_06,Product Request,System Test,08-02-2023,13-03-2023,02-03-2023
+ISS-0097,B,Integration 2,BIOS,Action Item,Low,Open,Engineer_02,Unclassified,Design Review,05-10-2023,10-10-2023,
+ISS-0098,A,Integration 2,Application,Review Finding,Medium,Closed,Engineer_06,Change Request,Code Review,16-08-2023,29-08-2023,17-08-2023
+ISS-0099,E,Integration 1,BIOS,Audit Finding,Critical,Overdue,Engineer_10,Unclassified,System Test,06-05-2023,11-06-2023,
+ISS-0100,E,Integration 1,BIOS,Defect,Medium,Overdue,Engineer_08,OS-specific,Design Review,14-11-2023,02-12-2023,
+ISS-0101,A,System Test,Driver,Review Finding,Low,In Progress,Engineer_12,OS-specific,System Test,27-08-2023,17-09-2023,
+ISS-0102,D,BST,BIOS,Defect,Medium,Overdue,Engineer_10,OS-specific,Integration Test,04-06-2023,19-06-2023,
+ISS-0103,C,BST,Server Specific,Action Item,Low,Overdue,Engineer_14,OS-specific,Code Review,12-01-2023,26-02-2023,
+ISS-0104,B,Final Release,Driver,Audit Finding,Critical,In Progress,Engineer_15,Product Request,Design Review,07-11-2023,02-12-2023,
+ISS-0105,E,Integration 2,BIOS,Action Item,Medium,Open,Engineer_06,Product Request,System Test,08-06-2023,09-07-2023,
+ISS-0106,E,Integration 2,Server Specific,Review Finding,High,In Progress,Engineer_05,Unclassified,System Test,31-03-2023,15-04-2023,
+ISS-0107,D,BST,BIOS,Audit Finding,Low,Open,Engineer_14,Unclassified,Final Release,01-06-2023,25-06-2023,
+ISS-0108,A,Integration 2,Server Specific,Action Item,Low,Overdue,Engineer_06,Product Request,Integration Test,07-07-2023,15-07-2023,
+ISS-0109,B,System Test,Application,Review Finding,High,Closed,Engineer_11,Code Integration,System Test,27-10-2023,23-11-2023,03-11-2023
+ISS-0110,A,Integration 1,Application,Action Item,Medium,Overdue,Engineer_08,Code Integration,Design Review,25-12-2023,16-01-2024,
+ISS-0111,D,System Test,Driver,Defect,High,In Progress,Engineer_15,Change Request,Design Review,01-05-2023,07-06-2023,
+ISS-0112,C,BST,Driver,Audit Finding,Low,Overdue,Engineer_08,FW Integration,Integration Test,08-09-2023,20-10-2023,
+ISS-0113,D,Integration 2,BIOS,Action Item,Low,Closed,Engineer_02,Product Request,Code Review,20-02-2023,18-03-2023,24-02-2023
+ISS-0114,A,Integration 2,BIOS,Audit Finding,High,Open,Engineer_02,Unclassified,Final Release,25-11-2023,07-01-2024,
+ISS-0115,B,Integration 2,BIOS,Action Item,Medium,In Progress,Engineer_14,FW Integration,Code Review,17-04-2023,27-05-2023,
+ISS-0116,A,BST,BIOS,Action Item,Medium,In Progress,Engineer_13,Unclassified,Code Review,04-10-2023,23-10-2023,
+ISS-0117,B,Integration 2,Application,Audit Finding,Low,Open,Engineer_09,Code Integration,Design Review,29-10-2023,21-11-2023,
+ISS-0118,E,BST,FW,Audit Finding,Critical,Closed,Engineer_12,Unclassified,Final Release,01-09-2023,02-10-2023,04-10-2023
+ISS-0119,A,System Test,FW,Defect,Critical,Open,Engineer_08,Product Request,System Test,04-06-2023,06-07-2023,
+ISS-0120,A,Integration 1,Driver,Review Finding,Low,Closed,Engineer_10,Driver,Integration Test,07-02-2023,15-02-2023,12-02-2023
+ISS-0121,A,BST,Server Specific,Audit Finding,Low,Overdue,Engineer_08,FW Integration,System Test,21-08-2023,25-09-2023,
+ISS-0122,D,BST,Driver,Defect,Medium,Overdue,Engineer_11,OS-specific,Integration Test,23-06-2023,25-07-2023,
+ISS-0123,A,BST,Application,Defect,Critical,Open,Engineer_12,Product Request,Integration Test,20-03-2023,22-04-2023,
+ISS-0124,E,Final Release,Server Specific,Review Finding,Critical,Open,Engineer_07,OS-specific,System Test,08-03-2023,15-04-2023,
+ISS-0125,A,Final Release,Server Specific,Audit Finding,High,Closed,Engineer_11,Change Request,Code Review,27-01-2023,17-02-2023,08-02-2023
+ISS-0126,C,Final Release,BIOS,Defect,Critical,Closed,Engineer_10,Product Request,Integration Test,25-02-2023,22-03-2023,05-03-2023
+ISS-0127,C,Integration 2,Driver,Action Item,High,Closed,Engineer_14,FW Integration,Final Release,15-01-2023,29-01-2023,07-02-2023
+ISS-0128,B,BST,Application,Audit Finding,Low,Open,Engineer_07,Change Request,Integration Test,03-12-2023,31-12-2023,
+ISS-0129,E,Final Release,Application,Action Item,High,Closed,Engineer_03,Unclassified,Final Release,22-03-2023,17-04-2023,12-04-2023
+ISS-0130,D,System Test,Server Specific,Defect,Low,Closed,Engineer_05,FW Integration,Final Release,26-01-2023,03-02-2023,10-02-2023
+ISS-0131,A,Integration 2,Server Specific,Defect,Medium,Overdue,Engineer_01,FW Integration,System Test,28-02-2023,25-03-2023,
+ISS-0132,B,Integration 2,BIOS,Audit Finding,Medium,Open,Engineer_05,OS-specific,Design Review,03-11-2023,09-11-2023,
+ISS-0133,B,Integration 1,FW,Audit Finding,Medium,Overdue,Engineer_02,Change Request,Design Review,04-01-2023,07-02-2023,
+ISS-0134,A,Integration 2,Server Specific,Defect,Low,Overdue,Engineer_12,Product Request,System Test,12-08-2023,16-08-2023,
+ISS-0135,A,Integration 2,BIOS,Defect,Medium,Overdue,Engineer_02,Change Request,Design Review,29-05-2023,08-06-2023,
+ISS-0136,E,BST,FW,Review Finding,Medium,Overdue,Engineer_04,OS-specific,Code Review,05-05-2023,04-06-2023,
+ISS-0137,E,Final Release,BIOS,Review Finding,Medium,Open,Engineer_12,Unclassified,Code Review,09-02-2023,16-03-2023,
+ISS-0138,C,Integration 1,BIOS,Audit Finding,Critical,In Progress,Engineer_03,Unclassified,System Test,01-05-2023,10-05-2023,
+ISS-0139,E,Final Release,Driver,Review Finding,High,Overdue,Engineer_08,Code Integration,System Test,26-08-2023,04-10-2023,
+ISS-0140,C,Final Release,Application,Review Finding,Critical,Closed,Engineer_05,Change Request,System Test,15-08-2023,27-09-2023,05-10-2023
+ISS-0141,A,BST,Server Specific,Defect,Low,Closed,Engineer_10,Driver,Design Review,20-01-2023,26-01-2023,30-01-2023
+ISS-0142,C,Final Release,FW,Audit Finding,Critical,In Progress,Engineer_08,Code Integration,Integration Test,19-08-2023,27-09-2023,
+ISS-0143,A,Integration 1,FW,Defect,High,In Progress,Engineer_06,OS-specific,Integration Test,13-02-2023,20-03-2023,
+ISS-0144,A,Integration 2,Application,Review Finding,Critical,Closed,Engineer_09,Product Request,System Test,18-07-2023,16-08-2023,26-08-2023
+ISS-0145,C,BST,Server Specific,Audit Finding,Medium,In Progress,Engineer_05,Product Request,System Test,26-05-2023,14-06-2023,
+ISS-0146,C,Final Release,FW,Review Finding,High,Open,Engineer_11,Product Request,Final Release,08-03-2023,18-04-2023,
+ISS-0147,E,Integration 2,Application,Review Finding,Medium,Overdue,Engineer_03,FW Integration,Integration Test,17-02-2023,02-04-2023,
+ISS-0148,B,Integration 1,Application,Review Finding,Critical,In Progress,Engineer_09,Unclassified,Final Release,06-09-2023,21-09-2023,
+ISS-0149,E,Integration 1,Server Specific,Defect,High,Closed,Engineer_03,FW Integration,Final Release,27-09-2023,02-10-2023,12-10-2023
+ISS-0150,D,Integration 2,BIOS,Defect,Medium,Open,Engineer_13,Product Request,System Test,26-03-2023,26-04-2023,
+ISS-0151,C,System Test,BIOS,Review Finding,Low,In Progress,Engineer_08,Unclassified,Integration Test,30-04-2023,06-06-2023,
+ISS-0152,B,Integration 1,Server Specific,Audit Finding,Medium,Overdue,Engineer_01,Product Request,System Test,15-07-2023,19-08-2023,
+ISS-0153,E,BST,Driver,Action Item,High,Open,Engineer_05,Change Request,Final Release,10-07-2023,17-08-2023,
+ISS-0154,B,System Test,Driver,Action Item,Low,Open,Engineer_01,Change Request,Final Release,17-03-2023,16-04-2023,
+ISS-0155,A,Integration 2,BIOS,Action Item,Medium,Overdue,Engineer_15,Code Integration,Integration Test,11-07-2023,29-07-2023,
+ISS-0156,C,System Test,BIOS,Defect,Low,Open,Engineer_10,Code Integration,Design Review,16-03-2023,27-03-2023,
+ISS-0157,B,Final Release,Server Specific,Defect,Critical,In Progress,Engineer_13,OS-specific,Code Review,10-01-2023,29-01-2023,
+ISS-0158,B,System Test,Server Specific,Defect,Critical,Open,Engineer_02,Unclassified,System Test,04-06-2023,14-06-2023,
+ISS-0159,E,Final Release,BIOS,Audit Finding,Medium,Open,Engineer_07,Code Integration,Final Release,02-11-2023,09-12-2023,
+ISS-0160,B,BST,Server Specific,Review Finding,Critical,Overdue,Engineer_09,Driver,Final Release,30-06-2023,18-07-2023,
+ISS-0161,D,System Test,Application,Defect,Medium,Open,Engineer_05,Product Request,Design Review,17-09-2023,25-10-2023,
+ISS-0162,A,Final Release,Driver,Audit Finding,Critical,Closed,Engineer_06,Driver,Integration Test,02-07-2023,09-07-2023,10-07-2023
+ISS-0163,D,Integration 1,BIOS,Action Item,Low,Overdue,Engineer_01,OS-specific,Code Review,26-11-2023,10-12-2023,
+ISS-0164,C,Integration 2,Server Specific,Defect,Low,Open,Engineer_05,Code Integration,Code Review,23-01-2023,07-02-2023,
+ISS-0165,C,Integration 2,Application,Review Finding,Low,Open,Engineer_15,Change Request,System Test,27-05-2023,21-06-2023,
+ISS-0166,D,System Test,Driver,Review Finding,Critical,In Progress,Engineer_12,Change Request,Design Review,17-07-2023,10-08-2023,
+ISS-0167,E,Integration 2,Driver,Action Item,Critical,In Progress,Engineer_06,Product Request,Integration Test,09-08-2023,19-09-2023,
+ISS-0168,B,System Test,Driver,Defect,Critical,Overdue,Engineer_12,Unclassified,Integration Test,06-06-2023,07-07-2023,
+ISS-0169,A,System Test,Driver,Audit Finding,Critical,Closed,Engineer_03,Unclassified,Final Release,11-11-2023,11-12-2023,15-11-2023
+ISS-0170,B,BST,BIOS,Review Finding,Medium,Open,Engineer_07,Driver,Design Review,14-12-2023,14-01-2024,
+ISS-0171,C,Integration 2,FW,Action Item,High,Overdue,Engineer_09,OS-specific,System Test,06-11-2023,18-11-2023,
+ISS-0172,A,BST,BIOS,Defect,Low,Closed,Engineer_15,Driver,Design Review,10-06-2023,24-07-2023,26-06-2023
+ISS-0173,B,Final Release,Driver,Defect,High,Overdue,Engineer_02,FW Integration,Design Review,15-05-2023,03-06-2023,
+ISS-0174,A,Integration 2,Driver,Action Item,Medium,Overdue,Engineer_15,OS-specific,Code Review,20-08-2023,03-09-2023,
+ISS-0175,C,Final Release,BIOS,Action Item,High,In Progress,Engineer_13,FW Integration,Code Review,31-12-2023,12-02-2024,
+ISS-0176,E,Integration 2,FW,Audit Finding,Critical,Closed,Engineer_02,OS-specific,System Test,10-09-2023,14-09-2023,19-09-2023
+ISS-0177,D,Final Release,Application,Audit Finding,Medium,Overdue,Engineer_11,Code Integration,System Test,03-09-2023,09-10-2023,
+ISS-0178,E,Final Release,BIOS,Audit Finding,Low,Closed,Engineer_09,Unclassified,Design Review,27-08-2023,02-10-2023,05-09-2023
+ISS-0179,C,Integration 1,BIOS,Review Finding,High,In Progress,Engineer_06,Driver,Integration Test,05-03-2023,10-04-2023,
+ISS-0180,E,Integration 2,BIOS,Review Finding,Critical,In Progress,Engineer_09,Product Request,Code Review,10-02-2023,01-03-2023,
+ISS-0181,B,Final Release,Server Specific,Review Finding,Critical,In Progress,Engineer_14,Unclassified,Design Review,31-10-2023,10-12-2023,
+ISS-0182,B,Final Release,FW,Action Item,Low,Closed,Engineer_15,Product Request,Final Release,11-02-2023,16-02-2023,22-02-2023
+ISS-0183,B,System Test,Driver,Defect,Critical,Closed,Engineer_12,Code Integration,Code Review,29-05-2023,12-07-2023,29-06-2023
+ISS-0184,D,Integration 1,Driver,Audit Finding,Medium,Overdue,Engineer_14,Product Request,Integration Test,14-08-2023,12-09-2023,
+ISS-0185,C,Final Release,Server Specific,Action Item,Medium,In Progress,Engineer_04,Change Request,Design Review,26-06-2023,24-07-2023,
+ISS-0186,B,BST,Application,Review Finding,Low,In Progress,Engineer_14,Driver,System Test,17-05-2023,17-06-2023,
+ISS-0187,C,Integration 1,BIOS,Defect,Low,Closed,Engineer_08,OS-specific,System Test,08-05-2023,21-05-2023,27-05-2023
+ISS-0188,E,System Test,BIOS,Audit Finding,Medium,Overdue,Engineer_01,Code Integration,Integration Test,12-01-2023,20-01-2023,
+ISS-0189,C,Final Release,Application,Action Item,Low,Overdue,Engineer_03,OS-specific,Integration Test,11-09-2023,22-10-2023,
+ISS-0190,D,BST,Server Specific,Audit Finding,Medium,Open,Engineer_09,OS-specific,Design Review,26-07-2023,21-08-2023,
+ISS-0191,E,Integration 2,Server Specific,Action Item,High,Overdue,Engineer_02,Change Request,Integration Test,17-07-2023,21-08-2023,
+ISS-0192,B,Final Release,Server Specific,Defect,Critical,Closed,Engineer_01,Code Integration,Code Review,23-06-2023,31-07-2023,03-07-2023
+ISS-0193,B,Final Release,Server Specific,Audit Finding,Medium,Overdue,Engineer_15,Driver,Integration Test,20-06-2023,23-07-2023,
+ISS-0194,C,Final Release,Server Specific,Defect,Medium,Closed,Engineer_08,Unclassified,Design Review,25-03-2023,22-04-2023,02-05-2023
+ISS-0195,D,Final Release,Driver,Action Item,Low,Open,Engineer_05,Product Request,Final Release,08-07-2023,01-08-2023,
+ISS-0196,E,System Test,BIOS,Defect,High,Open,Engineer_14,Product Request,Code Review,23-10-2023,09-11-2023,
+ISS-0197,B,BST,FW,Review Finding,Low,Open,Engineer_03,Change Request,Code Review,17-01-2023,25-02-2023,
+ISS-0198,A,Integration 1,Server Specific,Audit Finding,Medium,Overdue,Engineer_11,Change Request,Final Release,30-07-2023,03-09-2023,
+ISS-0199,D,Final Release,Driver,Review Finding,Medium,In Progress,Engineer_10,Change Request,Code Review,12-07-2023,04-08-2023,
+ISS-0200,C,Integration 2,BIOS,Defect,Medium,Closed,Engineer_08,OS-specific,Final Release,07-05-2023,27-05-2023,15-05-2023

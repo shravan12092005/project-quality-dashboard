@@ -1,0 +1,309 @@
+// =============================================================================
+// measures.dax  —  All DAX Measures for Project Quality Dashboard
+// =============================================================================
+// Organisation: Measures are grouped by display folder.
+// Each measure includes:
+//   • Purpose / KPI definition
+//   • Formula
+//   • Sanity-check note (how to validate against clean data)
+//   • Assumptions / edge cases
+//
+// IMPORTANT:
+//   Create a dedicated measures table (enter data → 1-column dummy table
+//   named "_Measures") and add all measures there.
+//   Assign the "Display Folder" property in the Properties pane on the right.
+// =============================================================================
+
+
+// =============================================================================
+// FOLDER: Defect KPIs
+// =============================================================================
+
+// -----------------------------------------------------------------------------
+// [Total Defects]
+// Definition: Count of all defect rows, regardless of status.
+// Sanity check: pandas → len(df) should equal 5000.
+// -----------------------------------------------------------------------------
+[Total Defects] =
+COUNTROWS( Defects )
+
+
+// -----------------------------------------------------------------------------
+// [Open Defects]
+// Definition: Defects with Status = "Open", "In Progress", or "Re-Opened".
+//             Deferred is excluded (tracked separately). See [Deferred Defects].
+// Assumption: Re-Opened counts as still-active (not resolved).
+// Sanity check: pandas → df[df['Status'].isin(['Open','In Progress','Re-Opened'])].shape[0]
+// -----------------------------------------------------------------------------
+[Open Defects] =
+CALCULATE(
+    COUNTROWS( Defects ),
+    Defects[Status] IN { "Open", "In Progress", "Re-Opened" }
+)
+
+
+// -----------------------------------------------------------------------------
+// [Closed Defects]
+// Definition: Defects with Status = "Closed".
+// Sanity check: pandas → df[df['Status']=='Closed'].shape[0]  (expect 788)
+// -----------------------------------------------------------------------------
+[Closed Defects] =
+CALCULATE(
+    COUNTROWS( Defects ),
+    Defects[Status] = "Closed"
+)
+
+
+// -----------------------------------------------------------------------------
+// [Deferred Defects]
+// Definition: Defects with Status = "Deferred". Tracked separately from
+//             Open and Closed per user decision.
+// Sanity check: pandas → df[df['Status']=='Deferred'].shape[0]  (expect 983)
+// -----------------------------------------------------------------------------
+[Deferred Defects] =
+CALCULATE(
+    COUNTROWS( Defects ),
+    Defects[Status] = "Deferred"
+)
+
+
+// -----------------------------------------------------------------------------
+// [Closure Rate %]
+// Definition: Percentage of all defects that are Closed.
+//             Formula: Closed / Total × 100
+// DIVIDE handles zero-denominator safely.
+// Sanity check: 788 / 5000 = 15.76%
+//   Note: this is low because Deferred (983) and Re-Opened (1038) are large.
+// -----------------------------------------------------------------------------
+[Closure Rate %] =
+DIVIDE(
+    [Closed Defects],
+    [Total Defects],
+    0
+) * 100
+
+
+// -----------------------------------------------------------------------------
+// [Avg Resolution Days]
+// Definition: Average of Resolution_Days for closed defects only.
+//             Open defects have no Closed_Date → excluded automatically.
+// Sanity check: pandas → df[df['Status']=='Closed']['Resolution_Days'].mean()  (≈30.6)
+// -----------------------------------------------------------------------------
+[Avg Resolution Days] =
+AVERAGEX(
+    FILTER(
+        Defects,
+        Defects[Status] = "Closed"
+        && NOT ISBLANK( Defects[Resolution_Days] )
+    ),
+    Defects[Resolution_Days]
+)
+
+
+// =============================================================================
+// FOLDER: Time Intelligence
+// =============================================================================
+
+// -----------------------------------------------------------------------------
+// [Defects Created by Month]
+// Definition: Count of defects where Created_Date falls in the current filter.
+//             Use on a line/bar chart with Dim_Date[Year_Month] on the axis.
+// Note: Requires Dim_Date to be marked as Date Table and related to
+//       Defects[Created_Date].
+// -----------------------------------------------------------------------------
+[Defects Created by Month] =
+CALCULATE(
+    COUNTROWS( Defects ),
+    USERELATIONSHIP( Dim_Date[Date], Defects[Created_Date] )
+)
+
+
+// -----------------------------------------------------------------------------
+// [Defects Closed by Month]
+// Definition: Count of defects where Closed_Date falls in the current filter.
+//             Use alongside [Defects Created by Month] on a dual-line chart.
+// Note: Uses an inactive relationship (Defects[Closed_Date] → Dim_Date[Date]).
+//       You must create this second relationship as inactive in Model view.
+// -----------------------------------------------------------------------------
+[Defects Closed by Month] =
+CALCULATE(
+    COUNTROWS(
+        FILTER( Defects, NOT ISBLANK( Defects[Closed_Date] ) )
+    ),
+    USERELATIONSHIP( Dim_Date[Date], Defects[Closed_Date] )
+)
+
+
+// -----------------------------------------------------------------------------
+// [Cumulative Backlog]
+// Definition: Running total of (Created - Closed) defects up to any given date.
+//             Represents the live defect backlog over time.
+// Pattern: FILTER on Dim_Date to include all dates ≤ current date.
+// Use on an area chart with Dim_Date[Year_Month] or [Date] on the axis.
+// Sanity check: At end of period, value should approximate [Open Defects] +
+//               [Deferred Defects] (i.e., all not-yet-closed).
+// -----------------------------------------------------------------------------
+[Cumulative Backlog] =
+VAR CurrentDate = MAX( Dim_Date[Date] )
+VAR Created =
+    CALCULATE(
+        COUNTROWS( Defects ),
+        FILTER( ALL( Dim_Date ), Dim_Date[Date] <= CurrentDate ),
+        USERELATIONSHIP( Dim_Date[Date], Defects[Created_Date] )
+    )
+VAR Closed =
+    CALCULATE(
+        COUNTROWS( FILTER( Defects, NOT ISBLANK( Defects[Closed_Date] ) ) ),
+        FILTER( ALL( Dim_Date ), Dim_Date[Date] <= CurrentDate ),
+        USERELATIONSHIP( Dim_Date[Date], Defects[Closed_Date] )
+    )
+RETURN
+    Created - Closed
+
+
+// =============================================================================
+// FOLDER: Quality KPIs
+// =============================================================================
+
+// -----------------------------------------------------------------------------
+// [SLA Compliance %]
+// Definition: Of all CLOSED defects, the percentage where Resolution_Days
+//             was within the SLA_Target_Days for that severity.
+//             SLA_Met = TRUE if Closed AND Resolution_Days ≤ SLA_Target_Days.
+// Assumption A1: Critical=2d, High=5d, Medium=10d, Low=20d.
+// Sanity check: pandas → df[df['SLA_Met']==True].shape[0] / df[df['Status']=='Closed'].shape[0]
+//               Expect: 120 / 788 ≈ 15.2%  (intentionally low in source data)
+// -----------------------------------------------------------------------------
+[SLA Compliance %] =
+VAR Closed = [Closed Defects]
+VAR SLAMet =
+    CALCULATE(
+        COUNTROWS( Defects ),
+        Defects[SLA_Met] = TRUE()
+    )
+RETURN
+    DIVIDE( SLAMet, Closed, 0 ) * 100
+
+
+// =============================================================================
+// FOLDER: Action Items
+// =============================================================================
+
+// -----------------------------------------------------------------------------
+// [Open Action Items]
+// Definition: Count of rows in Issues where Type = "Action Item"
+//             and Status is not "Closed".
+// Note: Issues table (synthetic) contains multiple types.
+// Sanity check: pandas issues_df filtered by Type and Status.
+// -----------------------------------------------------------------------------
+[Open Action Items] =
+CALCULATE(
+    COUNTROWS( Issues ),
+    Issues[Type] = "Action Item",
+    Issues[Status] IN { "Open", "In Progress", "Overdue" }
+)
+
+
+// -----------------------------------------------------------------------------
+// [Overdue Action Items]
+// Definition: Action Items where Is_Overdue = TRUE.
+//             Is_Overdue was derived in clean_data.py as:
+//             Status in (Open/In Progress/Overdue) AND Due_Date < today().
+// Sanity check: pandas → issues_df[(issues_df.Type=='Action Item') &
+//               (issues_df.Is_Overdue==True)].shape[0]
+// -----------------------------------------------------------------------------
+[Overdue Action Items] =
+CALCULATE(
+    COUNTROWS( Issues ),
+    Issues[Type] = "Action Item",
+    Issues[Is_Overdue] = TRUE()
+)
+
+
+// =============================================================================
+// FOLDER: Risk KPIs
+// =============================================================================
+
+// -----------------------------------------------------------------------------
+// [Avg Risk Score]
+// Definition: Average Risk_Score (Probability × Impact, range 1–25)
+//             across all Open and Escalated risks.
+// Assumption A8: High Risk threshold = 15 (i.e., 3×5 or higher).
+// Sanity check: pandas → risks_df[risks_df['Status'].isin(['Open','Escalated'])]['Risk_Score'].mean()
+// -----------------------------------------------------------------------------
+[Avg Risk Score] =
+AVERAGEX(
+    FILTER(
+        Risks,
+        Risks[Status] IN { "Open", "Escalated" }
+    ),
+    Risks[Risk_Score]
+)
+
+
+// -----------------------------------------------------------------------------
+// [High Risks]
+// Definition: Count of risks where Risk_Score >= 15 AND Status is Open or Escalated.
+//             Risk_Score = Probability (1–5) × Impact (1–5), max = 25.
+//             Score ≥ 15 = red zone on a 5×5 risk matrix.
+// Assumption A8: Threshold of 15 is standard practice.
+// Sanity check: pandas → risks_df[(risks_df.Risk_Score>=15) &
+//               (risks_df.Status.isin(['Open','Escalated']))].shape[0]  (expect 25)
+// -----------------------------------------------------------------------------
+[High Risks] =
+CALCULATE(
+    COUNTROWS( Risks ),
+    Risks[Risk_Score] >= 15,
+    Risks[Status] IN { "Open", "Escalated" }
+)
+
+
+// =============================================================================
+// FOLDER: Review KPIs
+// =============================================================================
+
+// -----------------------------------------------------------------------------
+// [Review Completion %]
+// Definition: Percentage of all reviews that have Status = "Completed".
+// Sanity check: pandas → reviews_df[reviews_df.Status=='Completed'].shape[0] /
+//               len(reviews_df)  (expect 28/120 ≈ 23.3%)
+// -----------------------------------------------------------------------------
+[Review Completion %] =
+DIVIDE(
+    CALCULATE( COUNTROWS( Reviews ), Reviews[Status] = "Completed" ),
+    COUNTROWS( Reviews ),
+    0
+) * 100
+
+
+// -----------------------------------------------------------------------------
+// [Overdue Reviews]
+// Definition: Reviews where Is_Overdue = TRUE
+//             (Status not Completed AND Scheduled_Date < today()).
+// Sanity check: pandas → reviews_df[reviews_df.Is_Overdue==True].shape[0]  (expect 92)
+// -----------------------------------------------------------------------------
+[Overdue Reviews] =
+CALCULATE(
+    COUNTROWS( Reviews ),
+    Reviews[Is_Overdue] = TRUE()
+)
+
+
+// =============================================================================
+// FOLDER: Audit KPIs
+// =============================================================================
+
+// -----------------------------------------------------------------------------
+// [Audit Findings Open]
+// Definition: Count of Issues where Type = "Audit Finding"
+//             and Status is not "Closed".
+// Note: Audit findings are stored in the Issues table (synthetic).
+// Sanity check: pandas → issues_df[(issues_df.Type=='Audit Finding') &
+//               (~issues_df.Status.isin(['Closed']))].shape[0]
+// -----------------------------------------------------------------------------
+[Audit Findings Open] =
+CALCULATE(
+    COUNTROWS( Issues ),
+    Issues[Type] = "Audit Finding",
+    Issues[Status] IN { "Open", "In Progress", "Overdue" }
+)
