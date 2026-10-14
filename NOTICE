@@ -6,22 +6,7 @@ Copyright (c) 2024 Shravan Mole
 License: MIT (see LICENSE)
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-1. ATTRIBUTION — REFERENCE DATASET
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-The file  data/raw/Processed_QA_Defects.csv  is sourced from:
-
-    Repository : nitinkishore1509/QA-Defect-Trend-Analysis
-    URL        : https://github.com/nitinkishore1509/QA-Defect-Trend-Analysis
-    License    : MIT License
-    Author     : nitinkishore1509
-
-This dataset is used in accordance with the MIT License terms.
-No other source code, documentation, or assets from that repository
-were copied into this project.
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-2. SYNTHETIC DATA DISCLOSURE
+1. SYNTHETIC DATA DISCLOSURE
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 The following files contain ENTIRELY SYNTHETIC (computer-generated) data.
@@ -40,7 +25,7 @@ Purpose     : To populate Risk, Review, and Action Item dashboard pages
               for portfolio demonstration purposes.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-3. ASSUMPTIONS
+2. ASSUMPTIONS
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 The following assumptions were applied during data preparation and

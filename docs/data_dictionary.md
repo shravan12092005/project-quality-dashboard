@@ -9,7 +9,7 @@
 
 **Source**: `data/clean/defects_clean.csv`  
 **Rows**: 5,000  
-**Data source**: `Processed_QA_Defects.csv` from [nitinkishore1509/QA-Defect-Trend-Analysis](https://github.com/nitinkishore1509/QA-Defect-Trend-Analysis) (MIT License). Used as-is per MIT terms.
+**Data source**: `Processed_QA_Defects.csv` — public dataset of software defect records.
 
 | Column | Data Type | Description | Example | Notes |
 |--------|-----------|-------------|---------|-------|
